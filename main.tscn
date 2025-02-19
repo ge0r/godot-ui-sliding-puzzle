@@ -1,0 +1,112 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbhuxpvgblkyx"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_gmmpj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gmmpj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.75501, 0.699798, 1)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Button1" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "2"
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "3"
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "4"
+icon_alignment = 1
+
+[node name="Button5" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+icon_alignment = 1
+
+[node name="Button6" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "6"
+icon_alignment = 1
+
+[node name="Button7" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "7"
+icon_alignment = 1
+
+[node name="Button8" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "8"
+icon_alignment = 1
+
+[node name="Button9" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+icon_alignment = 1
