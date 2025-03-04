@@ -1,18 +1,39 @@
 extends Control
 
-const SIZE = 9
-
 @onready var grid_container: GridContainer = $GridContainer
+@onready var h_box_container: HBoxContainer = $SizeSelector/HBoxContainer
+@onready var size_selector: VBoxContainer = $SizeSelector
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var count = 1
+	for button in h_box_container.get_children():
+		count += 1
+		button = button as Button
+		button.pressed.connect(_on_button_pressed.bind(count*count))
 
+func init_grid(size: int) -> void:
+	var side = sqrt(size)
 
-func init_grid() -> void:
-	var side = sqrt(SIZE)
-	for i in range(side):
-		for j in range(side):
-			pass
+	grid_container.columns = side
+	for i in range(size):
+		var button = Button.new()
+		if i != size - 1:
+			button.text = str(i + 1)
 
-	# TODO create dynamically the buttons with their text and its color
+		if i%2 == 0:
+			button.add_theme_color_override("font_color", Color.WHITE)
+		else:
+			button.add_theme_color_override("font_color", Color.RED)
+			button.add_theme_color_override("font_hover_color", Color.RED)
+			button.add_theme_color_override("font_pressed_color", Color.RED)
+			button.add_theme_color_override("font_focus_color", Color.RED)
+		button.custom_minimum_size = Vector2(35, 35)
+		grid_container.add_child(button)
+	print(size)
+
+func _on_button_pressed(size: int):
+	init_grid(size)
+	size_selector.process_mode = Node.PROCESS_MODE_DISABLED
+	size_selector.hide()
+	# size_selector.show()
