@@ -73,10 +73,11 @@ theme_override_constants/separation = 10
 alignment = 1
 
 [node name="Button1" type="Button" parent="SizeSelector/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.34902, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.34902, 0, 1)
+theme_override_colors/font_color = Color(0.34902, 0.537255, 0.835294, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nqe5k")
 theme_override_styles/hover = ExtResource("3_yr4wx")
 theme_override_styles/pressed = ExtResource("3_5twhg")
@@ -84,7 +85,7 @@ theme_override_styles/normal = ExtResource("3_yr4wx")
 text = "4"
 
 [node name="Button2" type="Button" parent="SizeSelector/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.34902, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.34902, 0, 1)
@@ -95,10 +96,11 @@ theme_override_styles/normal = ExtResource("3_yr4wx")
 text = "9"
 
 [node name="Button3" type="Button" parent="SizeSelector/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.34902, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.34902, 0, 1)
+theme_override_colors/font_color = Color(0.34902, 0.537255, 0.835294, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nqe5k")
 theme_override_styles/hover = ExtResource("3_yr4wx")
 theme_override_styles/pressed = ExtResource("3_5twhg")
@@ -106,7 +108,7 @@ theme_override_styles/normal = ExtResource("3_yr4wx")
 text = "16"
 
 [node name="Button4" type="Button" parent="SizeSelector/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.34902, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.34902, 0, 1)
@@ -117,10 +119,11 @@ theme_override_styles/normal = ExtResource("3_yr4wx")
 text = "25"
 
 [node name="Button5" type="Button" parent="SizeSelector/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.34902, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.34902, 0, 1)
+theme_override_colors/font_color = Color(0.34902, 0.537255, 0.835294, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nqe5k")
 theme_override_styles/hover = ExtResource("3_yr4wx")
 theme_override_styles/pressed = ExtResource("3_5twhg")
@@ -128,7 +131,7 @@ theme_override_styles/normal = ExtResource("3_yr4wx")
 text = "36"
 
 [node name="Button6" type="Button" parent="SizeSelector/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.34902, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.34902, 0, 1)
@@ -139,10 +142,11 @@ theme_override_styles/normal = ExtResource("3_yr4wx")
 text = "49"
 
 [node name="Button7" type="Button" parent="SizeSelector/HBoxContainer"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.34902, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0.34902, 0, 1)
+theme_override_colors/font_color = Color(0.34902, 0.537255, 0.835294, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nqe5k")
 theme_override_styles/hover = ExtResource("3_yr4wx")
 theme_override_styles/pressed = ExtResource("3_5twhg")
