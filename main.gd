@@ -7,6 +7,7 @@ const black_orange_stylebox_pressed = preload("res://button_black_orange_pressed
 @onready var grid_container: GridContainer = $GridContainer
 @onready var h_box_container: HBoxContainer = $SizeSelector/HBoxContainer
 @onready var size_selector: VBoxContainer = $SizeSelector
+@onready var winning_label: Label = $"Winning label"
 
 var button_grid: Dictionary = {}
 var blank_button: Vector2i
@@ -19,10 +20,6 @@ func _ready() -> void:
 		count += 1
 		button = button as Button
 		button.pressed.connect(_on_hbox_button_pressed.bind(count * count))
-
-
-func _process(_delta):
-	pass
 
 
 func init_grid(grid_size: int) -> void:
@@ -50,9 +47,6 @@ func init_grid(grid_size: int) -> void:
 			var value = (i * side) + j
 			if value != grid_size - 1:
 				button.text = str(numbers[value])
-				if numbers[value] % 2 == 0:
-					button.add_theme_color_override("font_color", Global.light_blue)
-					button.add_theme_color_override("font_focus_color", Global.light_blue)
 			else:
 				button.text = ""
 				blank_button = Vector2i(i, j)
@@ -92,19 +86,37 @@ func update_buttons() -> Array:
 	for neighbor in neighbors:
 		button_grid[neighbor].add_theme_color_override("font_hover_color", Global.orange)
 		button_grid[neighbor].add_theme_color_override("font_pressed_color", Global.orange)
-		button_grid[neighbor].add_theme_stylebox_override("normal", black_orange_stylebox)
-		button_grid[neighbor].add_theme_stylebox_override("hover", black_orange_stylebox)
-		button_grid[neighbor].add_theme_stylebox_override("pressed", black_orange_stylebox_pressed)
 
 	return neighbors
+
+
+func check_win():
+	for i in range(side):
+		for j in range(side):
+			var value = (i * side) + j
+			if value != side * side - 1:
+				if button_grid[Vector2i(i, j)].text != str(value + 1):
+					return
+	winning_label.show()
+	disable_buttons()
+
+
+func disable_buttons() -> void:
+	for button in button_grid.values():
+		button.disabled = true
 
 
 func _on_grid_button_pressed(button: Button) -> void:
 	var neighbors = update_buttons()
 	for neighbor in neighbors:
 		if button_grid[neighbor] == button:
-			print("lolz")
-			# TODO swap positions with the blank button
+			var text = button_grid[neighbor].text
+			button_grid[neighbor].text = button_grid[blank_button].text
+			button_grid[blank_button].text = text
+
+			blank_button = neighbor
+			update_buttons()
+			check_win()
 
 
 func _on_hbox_button_pressed(grid_size: int) -> void:
